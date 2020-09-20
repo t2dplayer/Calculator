@@ -1,0 +1,11 @@
+digraph G {
+    ready->x[label="[1..9]"];
+    x->x[label="[0..9]"];
+    x->op[label="[+,-,*,/]"];
+    op->y[label="[1..9]"];
+    y->y[label="[0..9]"];
+    y->op[label="[+,-,*,/]"];
+    y->ready[label="[=]"];
+    ready->op[label="op!=null&&[+,-,*,/]"];
+    ready->ready[label="op!=null&&[=]"];
+}
